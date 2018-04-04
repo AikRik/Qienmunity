@@ -41,3 +41,7 @@ Route::get('/verify', function () {
 
 });
 
+Route::get('/test', function () {
+    return "testing posting";
+
+});
