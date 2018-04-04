@@ -1,4 +1,3 @@
-
 <?php
 
 namespace Faker\Test\Provider\ro_RO;

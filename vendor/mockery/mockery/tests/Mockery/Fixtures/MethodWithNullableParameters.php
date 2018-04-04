@@ -27,7 +27,7 @@ class MethodWithNullableParameters
     {
     }
 
-    public function nullablePrimitive(string $a)
+    public function nullablePrimitive(?string $a)
     {
     }
 
@@ -35,7 +35,7 @@ class MethodWithNullableParameters
     {
     }
 
-    public function nullableSelf(self $a)
+    public function nullableSelf(?self $a)
     {
     }
 
@@ -43,7 +43,7 @@ class MethodWithNullableParameters
     {
     }
 
-    public function nullableClass(MethodWithNullableParameters $a)
+    public function nullableClass(?MethodWithNullableParameters $a)
     {
     }
 }
