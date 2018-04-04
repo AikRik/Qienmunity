@@ -30,7 +30,7 @@ class MethodWithNullableReturnType extends MockeryTestCase
         return 'test';
     }
 
-    public function nullablePrimitive() : ?string
+    public function nullablePrimitive() : string
     {
         return null;
     }
@@ -40,7 +40,7 @@ class MethodWithNullableReturnType extends MockeryTestCase
         return $this;
     }
 
-    public function nullableSelf() : ?self
+    public function nullableSelf() : self
     {
         return null;
     }
@@ -50,7 +50,7 @@ class MethodWithNullableReturnType extends MockeryTestCase
         return $this;
     }
 
-    public function nullableClass() : ?MethodWithNullableReturnType
+    public function nullableClass() : MethodWithNullableReturnType
     {
         return null;
     }
