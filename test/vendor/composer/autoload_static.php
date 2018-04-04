@@ -264,14 +264,13 @@ class ComposerStaticInitd6dcad55ff495d8afeec18bf7567cf8e
 
     public static $classMap = array (
         'CreateCommentsTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_03_164439_create_comments_table.php',
-        'CreateCommunitypostTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_03_141830_create_communitypost_table.php',
         'CreateCommunitypostsTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_03_183404_create_communityposts_table.php',
+        'CreateContactmail' => __DIR__ . '/../..' . '/database/migrations/2018_04_04_220400_create_contactmail.php',
         'CreateNieuwspostsTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_03_183319_create_nieuwsposts_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-        'CreateResourcepostTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_03_164210_create_resourcepost_table.php',
+        'CreateProfiel' => __DIR__ . '/../..' . '/database/migrations/2018_04_04_220411_create_profiel.php',
         'CreateResourcepostsTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_03_183116_create_resourceposts_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
-        'Create_nieuwspost' => __DIR__ . '/../..' . '/database/migrations/2018_04_03_133200_create_nieuwspost_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',

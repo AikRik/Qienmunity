@@ -7,14 +7,13 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'CreateCommentsTable' => $baseDir . '/database/migrations/2018_04_03_164439_create_comments_table.php',
-    'CreateCommunitypostTable' => $baseDir . '/database/migrations/2018_04_03_141830_create_communitypost_table.php',
     'CreateCommunitypostsTable' => $baseDir . '/database/migrations/2018_04_03_183404_create_communityposts_table.php',
+    'CreateContactmail' => $baseDir . '/database/migrations/2018_04_04_220400_create_contactmail.php',
     'CreateNieuwspostsTable' => $baseDir . '/database/migrations/2018_04_03_183319_create_nieuwsposts_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-    'CreateResourcepostTable' => $baseDir . '/database/migrations/2018_04_03_164210_create_resourcepost_table.php',
+    'CreateProfiel' => $baseDir . '/database/migrations/2018_04_04_220411_create_profiel.php',
     'CreateResourcepostsTable' => $baseDir . '/database/migrations/2018_04_03_183116_create_resourceposts_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
-    'Create_nieuwspost' => $baseDir . '/database/migrations/2018_04_03_133200_create_nieuwspost_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
