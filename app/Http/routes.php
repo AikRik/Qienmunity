@@ -33,4 +33,12 @@ Route::get('/resources', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
+<<<<<<< HEAD
 });
+=======
+
+Route::get('/verify', function () {
+    return "testing posting";
+
+});
+>>>>>>> 4a0b08a83d5cdba00d9ebabb363d111de05d6868
