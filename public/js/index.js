@@ -1,7 +1,17 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+backbone();
 
+function backbone(){
+    
+    var Dier = Backbone.Model.extend({
+        initialize:function(){
+            console.log("Nieuw dier geamaakt")
+        }
+    });
+    
+    console.log("in backbone");
+    
+    var kip = new Dier();
+    console.log(kip);
+    
+}

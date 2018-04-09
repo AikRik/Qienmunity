@@ -12,14 +12,14 @@ class CreateProfileTable extends Migration
      */
     public function up()
     {
-        Schema::create('profielen', function (Blueprint $table) {
+        Schema::create('profiles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('gebruikersnaam');
+            $table->string('username');
             $table->string('email');
-            $table->string('geboortedatum');
-            $table->string('foto');
-            $table->string('werkstatus');
-            $table->text('biografie');
+            $table->string('dateofbirth');
+            $table->string('image');
+            $table->string('position');
+            $table->text('biography');
             $table->timestamps();
             
         });
@@ -32,6 +32,6 @@ class CreateProfileTable extends Migration
      */
     public function down()
     {
-        schema::drop('profielen');
+        schema::drop('profiles');
     }
 }

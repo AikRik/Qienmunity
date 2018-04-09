@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Login</title>
-        
+@extends('layouts.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-    </head>
-    <body>
+@section('content')
+
         <h1>Login</h1><br>
             <div class="login">
                 <form action="verify" method="GET">
@@ -16,5 +11,4 @@
                 </form>
                 test
             </div>
-    </body>
-</html>
+@endsection
