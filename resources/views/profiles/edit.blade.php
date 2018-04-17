@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+@if (auth()->user()->id == $profile->user_id)
+
+
         <h1>Profiel bewerken</h1>
         <h2>{{$profile->username}}</h2>
         <a href="/myprofile" class="btn btn-default">< Ga terug</a><br/><br/>
@@ -29,4 +32,11 @@
             {{Form::submit('Wijzig profiel >', ['class'=>'btn btn-primary'])}}
         {!! Form::close() !!}
             
+@else
+    
+<h1>Leuk geprobeerd, dit is niet jouw profiel</h1>
+<a href="/myprofile" class="btn btn-default">< Terug naar mijn profiel</a>
+
+@endif
+
 @endsection

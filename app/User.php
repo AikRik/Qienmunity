@@ -24,15 +24,15 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     
-    public function communityPosts(){
+    public function communityposts(){
         return $this->hasMany('App\Communitypost');
     }
     
-    public function nieuwsPosts(){
+    public function nieuwsposts(){
         return $this->hasMany('App\Nieuwspost');
     }
     
-    public function resourcePosts(){
+    public function resourceposts(){
         return $this->hasMany('App\Resourcepost');
     }
     

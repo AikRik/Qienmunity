@@ -3,9 +3,9 @@
         <a href="/profiles" class="btn btn-default">< Terug naar alle profielen</a>
         <h1> {{$profile->username}} </h1>
         <ul>
-            <li>@if (Storage::disk('local')->has($profile->username . '-' . $user->id . '.jpg'))
+            <li>@if (Storage::disk('local')->has($profile->username . '-' . $profile->user_id . '.jpg'))
                 <section class="row new-post">
-                        <img width=250px src="{{ route('profile.image', ['filename' => $profile->username . '-' . $user->id . '.jpg']) }}" alt="" class="img-responsive">
+                        <img width=250px src="{{ route('profile.image', ['filename' => $profile->username . '-' . $profile->user_id . '.jpg']) }}" alt="" class="img-responsive">
                     </section>
                 @endif</li>
             <li><b>Geboortedatum: </b>{{$profile->dateofbirth}}</li>

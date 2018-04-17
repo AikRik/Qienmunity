@@ -60,7 +60,7 @@ class ProfileController extends Controller
         
         $old_name = auth()->user()->name;
         $file = $request->file('image');
-        $filename = $request['username'] . '-' . auth()->user()->id . '.jpg';
+        $filename = auth()->user()->name . '-' . auth()->user()->id . '.jpg';
         $update = false;
         
         if (Storage::disk('local')->has($filename)) {
@@ -118,6 +118,7 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
+  
         $profile = Profile::find($id);
         return view('profiles.edit')->with('profile', $profile);
     }
@@ -136,22 +137,21 @@ class ProfileController extends Controller
         ]);
         
         //        ==========-----FOTO UPDATE================
-        
+        if($request->input('image')){
         $old_name = auth()->user()->name;
-        $old_filename = $old_name . '-' . auth()->user()->id . '.jpg';
-//        DELETE FILE FROM STORAGE.
-        Storage::delete($old_filename);
-//        ADD FILE TO STORAGE
-        $file = $request->file('image');
-        $filename = $old_name . '-' . auth()->user()->id . '.jpg';
+            $old_filename = $old_name . '-' . auth()->user()->id . '.jpg';
+    //        DELETE FILE FROM STORAGE.
+            Storage::delete($old_filename);
+    //        ADD FILE TO STORAGE
+            $file = $request->file('image');
+            $filename = $old_name . '-' . auth()->user()->id . '.jpg';
 
-        Storage::disk('local')->put($filename, File::get($file));
+            Storage::disk('local')->put($filename, File::get($file));
 
-        
+        }
         //Profiel wijzigen
         
         $profile = Profile::find($id);
-        $profile->username = $request->input('username');
         $profile->email = $request->input('email');
         $profile->dateofbirth = $request->input('dateofbirth');
         $profile->position = $request->input('position');

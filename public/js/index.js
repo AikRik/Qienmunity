@@ -1,4 +1,3 @@
-
 function contactPost(){
     var subject = $(".subject").val();
     var text = $(".text").val();
@@ -16,16 +15,46 @@ function objectify(subject, text){
     xhttp.onreadystatechange = function(){
         document.getElementById('mailSucces').innerHTML = this.responseText;
     };
-    xhttp.open("POST","http://localhost:8000/contactMail", true);
+    xhttp.open("POST","/contactMail", true);
     xhttp.send(mailjson);
-    }
-    
-function query(){
-    var zoekterm = $(".form-control").val();
-    xhttp = new XMLHttpRequest();
-    var zoekjson = JSON.stringify(zoekterm);
-    //alert(zoekjson);
-    
-    xhttp.open("POST","http://localhost:8000/search", true);
-    xhttp.send(zoekjson);
 }
+    
+function zoeken(){
+    var data = {
+    term:$(".form-control").val(),
+    _token:$(".form-control").data('token')
+    };
+    
+    var jsondata = JSON.stringify(data);
+    
+    query(jsondata);
+}
+    
+function query(jsondata){
+    var url = $(".form-control").attr("data-link");
+    
+    $.ajax({
+        url: "/zoek",
+        type:"POST",
+        beforeSend: function (xhr) {
+            var token = $('meta[name="csrf_token"]').attr('content');
+
+            if (token) {
+                  return xhr.setRequestHeader('X-CSRF-TOKEN', token);
+            }
+        },
+        data: jsondata,
+        
+        success:function(data){
+            alert(data);
+        },error:function(){ 
+            alert("error!!!!");
+        }
+    }); 
+}
+
+    
+    
+
+    
+    

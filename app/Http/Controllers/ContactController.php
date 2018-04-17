@@ -22,8 +22,8 @@ class ContactController extends Controller
         mail::send('mailTemplate', ['content' => $mail,'sendFrom' => $sendFrom, 'replyTo' => $replyTo] ,function($message) use ($title){
             
             $message->subject($title);
-            $message->from('sevisser1@gmail.com','mijzlef');
-            $message->to('jack.corrigan@qien.nl');
+            $message->from('sevisser1@gmail.com','Qienmunity');
+            $message->to('sevisser1@gmail.com');
    
         });
         echo "Email Sent.";

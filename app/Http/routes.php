@@ -37,19 +37,17 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::post('/contactMail', 'ContactController@sendContact');
 
-    Route::post('/search', 'NieuwsController@searching');
+    Route::post('/zoek', 'NieuwsController@update');
 
-
-    Route::get('/home', [
-        'uses'=>'HomeController@index']
-            );
+    Route::get('/home','HomeController@index');
+    
+    Route::post('comments/{post_id}', ['uses' => 'CommentController@store', 'as' => 'comments.store']);
 
     Route::resource('nieuwsposts','NieuwsController');
 
     Route::resource('profiles', 'ProfileController');
 
-    Route::get('/myprofile',[
-        'uses'=>'ProfileController@myProfile'] );
+    Route::get('/myprofile','ProfileController@myProfile' );
 
     Route::resource('post','PostIdController');
 

@@ -8,7 +8,7 @@
                 <a href="/nieuwsposts/create" class="btn btn-default">Nieuw bericht ></a>
             @endif
             
-            <input id="zoek" type="text" name='search' onkeyup="query()" class="form-control" placeholder="zoek">
+            <input id="zoek" type="text" name='search' onkeyup="zoeken()" data-token="{{ csrf_token() }}" data-link="{{ url('/zoek') }}" class="form-control" placeholder="zoek">
             
                 </div>
             <br/>

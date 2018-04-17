@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Nieuwspost extends Model
+class nieuwspost extends Model
 {
     public $primaryKey ='id';
     public $timestamps = true;
